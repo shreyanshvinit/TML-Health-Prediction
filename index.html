@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post"><br><br>
+            <h2>Employee Health Prediction</h2>
+            <h3>Gender</h3><select name="Gender" id="sex" required="required">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br>
+            <h3>Age</h3><input id="first" name="Age" type="number" required="required"><br>
+            <h3>Height (in cm)</h3><input id="second" name="Height" required="required"><br>
+            <h3>Weight (in kg)</h3><input id="third" name="Weight" required="required"><br>
+            <!-- <h3>BMI</h3><input id="fourth" name="BMI" required="required" ><br> -->
+            <h3>RBS</h3><input id="fourth" name="RBS" required="required" ><br>
+            <h3>Addiction</h3><select name="Addiction" id="addict" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br>
+            <h3>Sick Leave (no. of days)</h3><input id="fifth" name="Sick Leave" type="number" required="required"><br>
+            <h3>Creatinine</h3><input id="sixth" name="Creatinine" required="required"><br>
+            <h3>SGPT</h3><input id="seventh" name="SGPT" required="required"><br>
+            <h3>BP</h3><input id="eighth" name="BP" required="required"><br>
+            <br><br><h3>Health for upcoming year:</h3><button id="sub" type="submit ">Predict</button>
+            <br>
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #addict {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #sex {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #sex:hover {
+            background-color: coral;
+        }
+        
+        #addict {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #addict:hover {
+            background-color: coral;
+        }
+        
+    /*    #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #resea:hover {
+            background-color: coral;
+        }*/s
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #fifth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #sixth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #seventh {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #eighth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
